@@ -33,6 +33,33 @@ public class MainClass {
         ordersList.add(o4);
         ordersList.add(o5);
 
+        //нахожу юзеров по их id и id в заказе
+
+        List<Object> newList = new ArrayList<Object>(usersList);
+        newList.addAll(ordersList);
+        //не понимаю как можно сделать перебор по каждому заказу и клиенту
+        for (int i = 0; i < usersList.size(); i++){
+            if (u1.getUserId() == o3.getU_idInOrder()){
+                i++;
+                System.out.println("У пользователя с ID №" + i + " есть заказы.");
+            }
+        }
+
+        //мои попытки собрать два параметра из разных классов
+//        public static int findUsersbyOrderId(){
+//        return (int) usersList.stream().filter((p) -> (p.getUserId().equals(getU_idInOrder)))
+//                .count();
+
+//        List<Integer> newList = Stream.of(ordersList, usersList)
+//                .flatMap(t -> Collection.stream(t))
+//                .collect(Collectors.toList());
+
+        //думала создать общий список с заказами и клиентами, кажется, плохая идея
+//        List<Object> newList = new ArrayList<Object>(usersList);
+//        newList.addAll(ordersList);
+//        for(int i = 0; i < newList.size(); i++) {
+//        System.out.println(newList.get(i).getName());
+
     }
 }
 
