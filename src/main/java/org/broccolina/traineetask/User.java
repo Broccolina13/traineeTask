@@ -5,7 +5,12 @@ import java.util.List;
 
 public class User {
 
-    private boolean u_idInOrder;
+    public static List<User> usersList = new ArrayList<User>();
+    private int userId;
+    private String lastName;
+    private String firstName;
+    private String address;
+    private String city;
 
     public User(int userId,
                 String lastName,
@@ -19,12 +24,19 @@ public class User {
         this.city = city;
     }
 
-    private int userId;
-    private String lastName;
-    private String firstName;
-    private String address;
-    private String city;
-    public static List<User> usersList = new ArrayList<User>();
+    //  Создаем и заполняем исходные данные пользователей
+    public static List<User> createUsers (List <User> usersList) {
+
+        User u1 = new User(1, "Hansen", "Ola", "Timoteivn 10", "Sanders");
+        User u2 = new User(2, "Svendson", "Tove", "Borgvn 23", "Sanders");
+        User u3 = new User(3, "Petterson", "Kari", "Storg 20", "Stavanger");
+
+        usersList.add(u1);
+        usersList.add(u2);
+        usersList.add(u3);
+
+        return usersList;
+    }
 
     public User(int u_idInOrder) {
 
