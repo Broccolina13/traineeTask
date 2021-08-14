@@ -5,7 +5,7 @@ import java.util.List;
 
 public class User {
 
-    public static List<User> usersList = new ArrayList<User>();
+    public static List<User> usersList = new ArrayList<>();
     private int userId;
     private String lastName;
     private String firstName;
@@ -24,8 +24,8 @@ public class User {
         this.city = city;
     }
 
-    //  Создаем и заполняем исходные данные пользователей
-    public static List<User> createUsers (List <User> usersList) {
+    //  Создаем и заполняем пользователей исходными данными
+    public static List<User> createUsers(List<User> usersList) {
 
         User u1 = new User(1, "Hansen", "Ola", "Timoteivn 10", "Sanders");
         User u2 = new User(2, "Svendson", "Tove", "Borgvn 23", "Sanders");
@@ -36,10 +36,6 @@ public class User {
         usersList.add(u3);
 
         return usersList;
-    }
-
-    public User(int u_idInOrder) {
-
     }
 
     public int getUserId() {

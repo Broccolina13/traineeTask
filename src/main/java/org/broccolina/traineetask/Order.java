@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Order {
 
-    public static List<Order> ordersList = new ArrayList<Order>();
+    public static List<Order> ordersList = new ArrayList<>();
     private String orderId;
     private String orderNo;
     private int u_idInOrder;
@@ -19,7 +19,7 @@ public class Order {
     }
 
     //  Создаем и заполняем заказы исходными данными
-    public List<Order> crateOrders (List<Order> ordersList) {
+    public static List<Order> createOrder(List<Order>ordersList){
 
         Order o1 = new Order("1", "77895", 3);
         Order o2 = new Order("2", "44678", 3);
@@ -60,7 +60,7 @@ public class Order {
         this.u_idInOrder = u_idInOrder;
     }
 
-    public List<Order> getOrdersList() {
+    public List<Order> getOrersList() {
         return ordersList;
     }
 
